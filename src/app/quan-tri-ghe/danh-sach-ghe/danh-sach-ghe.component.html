@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 bg-info px-4 text-center">
+            <h1 class="text-white">Đặt Ghế</h1>
+            <!-- Event Binding chính bằng emitStatus bên ghe component -->
+            <app-ghe *ngFor = "let ghe of DanhSachGhe" [Ghe] = ghe (emitStatus) = "datGheParent($event, ghe)"></app-ghe>
+            <hr/>
+            <p>Tổng ghế đã chọn:
+                <span *ngFor = "let itemghe of DanhSachGheDangDat">{{itemghe.TenGhe}}, </span>
+            </p>
+            <p>Tổng Tiền: {{GiaGhe}}</p>
+            <hr>
+            <p>Số Ghế Được Chọn: {{soGheDuocChon}}</p>
+            <p>Số Ghế Đã Đặt: {{soGheDaDat}} </p>
+            <p>Số Ghê Còn Lại: {{soGheConLai}}</p>
+        </div>
+    </div>
+</div>

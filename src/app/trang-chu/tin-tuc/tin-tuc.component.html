@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12 text-center">
+    <div class="btn btn-success mr-2" (click) = "ChonLoaiTin('DienAnh')">Điện Ảnh</div>
+    <div class="btn btn-success mr-2" (click) = "ChonLoaiTin('Review')">Review</div>
+    <div class="btn btn-success" (click) = "ChonLoaiTin('KhuyenMai')">Khuyến mãi</div>
+  </div>
+</div>
+
+<div class="row my-4" [ngSwitch] ="loaiTinTuc">
+  <div class="col-12" *ngSwitchCase = " 'DienAnh' ">
+    <app-dien-anh></app-dien-anh>
+  </div>
+  <div class="col-12" *ngSwitchCase = " 'Review' ">
+    <app-review></app-review>
+  </div>
+  <div class="col-12" *ngSwitchCase = " 'KhuyenMai' ">
+    <app-khuyen-mai></app-khuyen-mai>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<ng-container *ngIf = "!Ghe.TrangThai; else GheDaDuocChon">
+    <button class="btn mr-2 mb-2 ghe" [ngClass]="{'btn-success':status}" (click) = "datGhe()">{{Ghe.SoGhe}}</button>
+</ng-container>
+
+
+<!-- Bây giờ làm sao để hiện thị ghế đã được chọn trước với TrangThai là true
+Lưu ý một nút button tương đương với 1 ghế
+Ở đây chúng ta dùng ngIf -> nếu trạng thái ghế là false thì hiển thị ở trên -->
+
+<ng-template #GheDaDuocChon>
+    <button class="btn btn-danger  mr-2 mb-2 ghe" style="cursor: not-allowed;">{{Ghe.SoGhe}}</button>
+</ng-template>
